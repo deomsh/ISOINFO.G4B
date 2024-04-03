@@ -46,16 +46,16 @@ Version 0.7: First published version
 
 ISO-9660
 
-Supported: Joliet, Rock Ridge, CD-XA (untested).
+Supported: ECMA 119, El Torito, Joliet, Rock Ridge, CD-XA (untested). 
 Unupported: Multi-Extent files
 
 UDF
 
-Supported: all versions (v2.60 untested).
-Unsupported: Named Streams
+Supported: all versions (v2.60 untested on optical media). 
+Unsupported: Named Streams (except first System Stream)
 
 General Limitations:
-Maximum length of PATH (and FILE) about 510 chars.
+Maximum length of PATH (and FILE) about 510 chars. 
 Only embedded Extended Attributes supported
 
 Used sources:
