@@ -54,7 +54,7 @@ Used sources:
 UDF
 
 Supported: all versions (v2.60 untested on optical media). 
-Unsupported: Named Streams (except first System Stream). 
+Unsupported: Multi Session (except UDF CD-R/DVD+/-R), Named Streams (except first System Stream). 
 
 General Limitations:
 Maximum length of PATH (and FILE) about 510 chars. 
