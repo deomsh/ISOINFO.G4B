@@ -40,7 +40,7 @@ Example:		ISOINFO.G4B --UDFRECORD=System\ Volume\ Information (hd0,0)/some.iso
 
 Example:		ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso
 
-History
+HISTORY
 
 Version 0.7: First published version
 
@@ -56,14 +56,18 @@ UDF
 Supported: all versions (v2.60 untested on optical media). 
 Unsupported: Multi Session (except UDF CD-R/DVD+/-R), Named Streams (except first System Stream). 
 
+Used sources:
+
 General Limitations:
 Maximum length of PATH (and FILE) about 510 chars. 
 Only embedded Extended Attributes supported. 
 
-Used sources:
+REMARKS
 
+All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so +1). 
+ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
 
-SCREENSHOTS:
+SCREENSHOTS
 
 ISO-9660/ UDF Descriptors on Windows 10 iso
 
