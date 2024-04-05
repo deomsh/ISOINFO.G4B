@@ -1,6 +1,6 @@
 # ISOINFO.G4B
 
-ISOINFO.G4B v0.7 (20240404), by deomsh
+ISOINFO.G4B v0.7 (20240406), by deomsh
 
 Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist
 
@@ -46,17 +46,19 @@ Version 0.7: First published version
 
 ISO-9660
 
-Supported: ECMA 119, El Torito, Joliet, Rock Ridge, CD-XA (untested). 
-Unupported: Multi-Extent files
+Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge. 
+Unupported: Multi-Extent files. 
+
+Used sources:
 
 UDF
 
 Supported: all versions (v2.60 untested on optical media). 
-Unsupported: Named Streams (except first System Stream)
+Unsupported: Named Streams (except first System Stream). 
 
 General Limitations:
 Maximum length of PATH (and FILE) about 510 chars. 
-Only embedded Extended Attributes supported
+Only embedded Extended Attributes supported. 
 
 Used sources:
 
