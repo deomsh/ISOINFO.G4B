@@ -80,7 +80,7 @@ ISO-9660/ UDF Descriptors on Windows 10 iso
 ![ISOINFO G4B (0xe0) ISO-9660 UDF-Bridge Windows_10 iso attached in VBOX 7 UDFFD (part 2) XI](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/0a24aa33-3e74-4cbd-84cc-d1c06a08751c)
 ![ISOINFO G4B (0xe0) ISO-9660 UDF-Bridge Windows_10 iso attached in VBOX 7 UDFFD (part 3) UDFFID (parent) XII](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/1692f59a-8633-48b1-a600-c93406dab55b)
 ![ISOINFO G4B (0xe0) ISO-9660 UDF-Bridge Windows_10 iso attached in VBOX 7 UDFFID (first file) XIII](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/7befa7d3-6f1e-4504-a03c-2dd07c0a14b9)
-Example of read-out of Booting Catalog to get access to FAT efi-floppy on Windows 10 iso:
+Examples of read-out of Booting Catalog to get access to FAT efi-floppy on Windows 10 iso:
 ![Use read-out of Bootctalog on (0xe0) ISO-9660 UDF-Bridge Windows_10 iso attached in VBOX 7 to get access to FAT EFI-bootfloppy XIV](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/b8e39b32-5a1d-4fa6-b510-1d35dd0c499c)
 
 DIR-function on UDF v2.50
