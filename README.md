@@ -7,7 +7,7 @@ Function 2:	Read/ find directories/ files or read-out their Directory Records
 Use:				ISOINFO.G4B [SWITCHES] DEVICE|FILE  
 Help:				ISOINFO.G4B /?  
 
-SWITCHES
+SWITCHES  
 General:		[--Q] [--HEX] [--BLOCKSIZE=bytes] [--MDBASE=sector] [--INFO]  
 ISO 1:			--ISOVDS|--ISOPVD|--BD|--SVD[2]|--VPD|--VDT|--ROOT[2/3]  
 ISO 2:			--DIR|RECORD[2/3][RR]=[PATH][name.ext[;n]] [--ATTRIB=DF[-]H] [--CASE] [--DEEP]  
