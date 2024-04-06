@@ -2,8 +2,8 @@
 
 Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
 Function 2:	Read/ find directories/ files or read-out their Directory Records  
-Use:				ISOINFO.G4B [SWITCHES] DEVICE|FILE  
-Help:				ISOINFO.G4B /?  
+Use:				<pre><code>ISOINFO.G4B [SWITCHES] DEVICE|FILE  
+Help:				<pre><code>ISOINFO.G4B /?  
 
 SWITCHES  
 General:		[--Q] [--HEX] [--BLOCKSIZE=bytes] [--MDBASE=sector] [--INFO]  
