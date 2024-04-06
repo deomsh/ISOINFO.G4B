@@ -20,7 +20,7 @@ ISO 2:			--DIR|RECORD[2/3][RR]=[PATH][name.ext[;n]] [--ATTRIB=DF[-]H] [--CASE] [
 
 UDF 1:			--VRS|--UDFVDS|--VDS2|--FDS|--AVDP|--PVD|--IUVD|--PD|--LVD|--USD|--LVID|--FSD|--FE|--EFE|--TD|--VAT|--SPT|--MF|--MMF|--MBF|--SBD|--UDFROOT [--MIRROR|--PREVIOUS]
 
-UDF 2:			--UDFDIR|UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H0] [--CASE] [--MIRROR|--PREVIOUS] [--MDCOPY|MDMAP=disk_num]
+UDF 2:			--UDFDIR|UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H[-]0] [--CASE] [--MIRROR|--PREVIOUS] [--MDCOPY|MDMAP=disk_num]
 
 UDF 3:			--LSN=sector|--LBN=number [--OFFSET=bytes] [--MIRROR|--PREVIOUS]
 
