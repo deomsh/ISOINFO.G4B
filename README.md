@@ -42,9 +42,9 @@ Example:		ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso
 
 REMARKS
 
-All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1'). 
-ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
-On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.
+All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1').  
+ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk).  
+On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.  
   
 ### HISTORY
 
@@ -52,20 +52,20 @@ Version 0.7: First published version
 
 ### ISO-9660
 
-Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge.
+Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge.  
 
 Unupported: Path Table, Multi-Extent files, Interleave Gap
 
 
 ### UDF
 
-Supported: all versions (v2.60 untested on optical media). 
+Supported: all versions (v2.60 untested on optical media).  
 
 Unsupported: More than one Volume/ (real) Partition. Multi Session (except UDF CD-R/DVD+/-R). Named Streams (except first System Stream). 
 
 ### GENERAL LIMITATIONS
 
-Maximum length of PATH (and FILE) about 510 chars, Only embedded Extended Attributes supported. 
+Maximum length of PATH (and FILE) about 510 chars.  Only embedded Extended Attributes supported. 
 
 
 ### USED SOURCES ISO-9660
