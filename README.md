@@ -8,10 +8,10 @@ Help:       ISOINFO.G4B /?
 SWITCHES  
 General:    [--Q] [--HEX] [--BLOCKSIZE=bytes] [--MDBASE=sector] [--INFO]  
 ISO 1:      --ISOVDS|--ISOPVD|--BD|--SVD[2]|--VPD|--VDT|--ROOT[2/3]  
-ISO 2:      --DIR|RECORD[2/3][RR]=[PATH][name.ext[;n]] [--ATTRIB=DF[-]H] [--CASE] [--DEEP]  
+ISO 2:      --DIR/RECORD[2/3][RR]=[PATH][name.ext[;n]] [--ATTRIB=DF[-]H] [--CASE] [--DEEP]  
 UDF 1:      --VRS|--UDFVDS|--VDS2|--FDS|--AVDP|--PVD|--IUVD|--PD|--LVD|--USD|--LVID|--FSD|--FE|--EFE|--TD|  
               --VAT|--SPT|--MF|--MMF|--MBF|--SBD|--UDFROOT [--MIRROR|--PREVIOUS]  
-UDF 2:      --UDFDIR|UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H[-]0] [--CASE] [--MIRROR|--PREVIOUS]  
+UDF 2:      --UDFDIR/UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H[-]0] [--CASE] [--MIRROR|--PREVIOUS]  
               [--MDCOPY|MDMAP=disk_num]  
 UDF 3:      --LSN=sector|--LBN=number [--OFFSET=bytes] [--MIRROR|--PREVIOUS]  
 
