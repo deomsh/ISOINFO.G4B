@@ -38,7 +38,7 @@ Version 0.7: First published version
 
 Supported:  
 ISO-9660 (all levels), El Torito, Joliet, Rock Ridge  
-Unupported:  
+  Unupported:  
 Path Table  
 Multi-Extent files  
 Interleave Gap  
@@ -48,7 +48,7 @@ Interleave Gap
 
 Supported:  
 All versions (v2.60 untested on optical media)  
-Unsupported:  
+  Unsupported:  
 More than one Volume/ (real) Partition  
 Multi Session (except UDF CD-R/DVD+/-R)  
 Named Streams (except first System Stream)   
@@ -59,7 +59,7 @@ Maximum length of PATH (and FILE) about 510 chars
 Only embedded Extended Attributes supported  
 
 
-### USED SOURCES ISO-9660
+#### USED SOURCES ISO-9660
 
 ECMA 119 4th Edition / June 2019: https://ecma-international.org/wp-content/uploads/ECMA-119_4th_edition_june_2019.pdf  
 El Torito spec: https://pdos.csail.mit.edu/6.828/2018/readings/boot-cdrom.pdf  
@@ -79,7 +79,7 @@ https://handwiki.org/wiki/TRANS.TBL
 https://dev.lovelyhq.com/libburnia/web/wikis/Aaip  
 SEGA CD-XA specs: https://antime.kapsi.fi/sega/files/ST-040-R4-051795.pdf  
 
-### USED SOURCES UDF
+#### USED SOURCES UDF
 ECMA 167 3rd edition, June 1997: https://ecma-international.org/wp-content/uploads/ECMA-167_3rd_edition_june_1997.pdf  
 ISO-9660/ UDF Bridge: https://ecma-international.org/wp-content/uploads/ECMA_TR-71_1st_edition_february_1998.pdf  
 All UDF specs: http://www.osta.org/  
@@ -99,7 +99,7 @@ https://bsdio.com/edk2/docs/master/_mde_pkg_2_include_2_industry_standard_2_udf_
 Windows 10 quirks: https://lore.kernel.org/lkml/96e1ea00-ac12-015d-5c54-80a83f08b898@digidescorp.com/T/  
 Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf  
 
-### VARIOUS TEST ISO'S
+#### VARIOUS TEST ISO'S
 ISO-9660 Extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures  
 UDF 1.50-2.60 test iso's: https://sourceforge.net/p/sevenzip/patches/389/  
 UDF: https://sourceforge.net/p/sevenzip/bugs/964/  
