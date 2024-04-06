@@ -99,8 +99,8 @@ DVD+R: using previous UDF v1.50 Virtual Allocation Tables
 
 ![GRUB4DOS 20160118 45c ISOINFO --UDFDIR  --PREVIOUS  (0xe0) on DVDR1SES ISO until 'No previous VAT found' (1MB ONE AVDP) I](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/c2b55fec-94ea-45d4-95f2-1855a1a0c12e)
 
-Using ISOINFO.G4B on GRUB4DOS for UEFI and CD (0xa0) to get access to small file (embedded in File Entry)
-![Using ISOINFO G4B on GRUB4EFI and CD (0xa0) to get access to small file embedded in File Entry I](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/5e77a99f-034d-43d1-bd6b-67243462e6a6)
+Using ISOINFO.G4B on GRUB4DOS for UEFI with CD (0xa0) to get access to small file (embedded in File Entry)
+![Using ISOINFO G4B on GRUB4EFI and CD (0xa0) to get access to small file embedded in File Entry I](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/89e78d94-917e-425b-b42b-2d84f735aa5b)
 
 CD-RW: small empty UDF v2.01 Sparing Table with HEX
 
