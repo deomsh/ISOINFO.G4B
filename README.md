@@ -15,7 +15,7 @@ UDF 3:			--LSN=sector|--LBN=number [--OFFSET=bytes] [--MIRROR|--PREVIOUS]
 
 REMARKS  
 All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1')  
-ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk)  
+ISO-9660 and UDF tested up to 8GB-DVD, UDF up to 465GB-Partition (on Hard Disk)  
 On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value  
 
 EXAMPLES  
