@@ -1,6 +1,6 @@
 # ISOINFO.G4B
 
-ISOINFO.G4B v0.7 (20240406), by deomsh
+## ISOINFO.G4B v0.7 (20240406), by deomsh
 
 Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist
 
@@ -44,13 +44,12 @@ REMARKS
 
 All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1'). 
 ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
-On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.  
+On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.
   
 HISTORY
 
-Version 0.7: First published version  
+Version 0.7: First published version
 
-..
 ISO-9660
 
 Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge.
