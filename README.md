@@ -38,7 +38,8 @@ Version 0.7: First published version
 
 Supported:  
 ISO-9660 (all levels), El Torito, Joliet, Rock Ridge  
-  Unupported:  
+  
+Unupported:  
 Path Table  
 Multi-Extent files  
 Interleave Gap  
@@ -48,7 +49,8 @@ Interleave Gap
 
 Supported:  
 All versions (v2.60 untested on optical media)  
-  Unsupported:  
+  
+Unsupported:  
 More than one Volume/ (real) Partition  
 Multi Session (except UDF CD-R/DVD+/-R)  
 Named Streams (except first System Stream)   
