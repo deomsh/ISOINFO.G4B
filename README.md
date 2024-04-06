@@ -15,20 +15,21 @@ UDF 1:			--VRS|--UDFVDS|--VDS2|--FDS|--AVDP|--PVD|--IUVD|--PD|--LVD|--USD|--LVID
 UDF 2:			--UDFDIR|UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H[-]0] [--CASE] [--MIRROR|--PREVIOUS] [--MDCOPY|MDMAP=disk_num]  
 UDF 3:			--LSN=sector|--LBN=number [--OFFSET=bytes] [--MIRROR|--PREVIOUS]  
 
-Example:		ISOINFO.G4B (hd0,0)/filename.iso  
-Example:		ISOINFO.G4B --ISOPVD (0xe0)  
-Example:		ISOINFO.G4B --UDFVDS (0xe0)  
-Example:		ISOINFO.G4B --RECORD=FILENAME.EXT;1 (0xe0)  
-Example:		ISOINFO.G4B --RECORD2=boot.catalog (0xe0)  
-Example:		ISOINFO.G4B --DIR2=SUBDIR/bo*.c* (0xe0)  
-Example:		ISOINFO.G4B --UDFRECORD=System\ Volume\ Information (hd0,0)/some.iso  
-Example:		ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso  
-
 REMARKS  
 All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1').  
 ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk).  
 On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.  
-  
+
+EXAMPLES  
+ISOINFO.G4B (hd0,0)/filename.iso  
+ISOINFO.G4B --ISOPVD (0xe0)  
+ISOINFO.G4B --UDFVDS (0xe0)  
+ISOINFO.G4B --RECORD=FILENAME.EXT;1 (0xe0)  
+ISOINFO.G4B --RECORD2=boot.catalog (0xe0)  
+ISOINFO.G4B --DIR2=SUBDIR/bo*.c* (0xe0)  
+ISOINFO.G4B --UDFRECORD=System\ Volume\ Information (hd0,0)/some.iso  
+ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso  
+
 ### HISTORY
 
 Version 0.7: First published version
