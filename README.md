@@ -1,6 +1,4 @@
-# ISOINFO.G4B
-
-### ISOINFO.G4B v0.7 (20240406), by deomsh
+## ISOINFO.G4B v0.7 (20240406), by deomsh
 
 Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
 Function 2:	Read/ find directories/ files or read-out their Directory Records  
@@ -52,6 +50,7 @@ All versions (v2.60 untested on optical media)
   
 Unsupported:  
 More than one Volume/ (real) Partition  
+Higher Character set's than OSTA CS0  
 Multi Session (except UDF CD-R/DVD+/-R)  
 Named Streams (except first System Stream)   
 
@@ -88,7 +87,7 @@ All UDF specs: http://www.osta.org/
 https://wiki.osdev.org/UDF  
 https://en.wikipedia.org/wiki/Universal_Disk_Format  
 Wenguang's Introduction to Universal Disk Format (UDF): https://web.archive.org/web/20140512230150/https://sites.google.com/site/udfintro/  
-About offset of Metadata Partition; embedded files, see link in: http://reboot.pro/index.php?showtopic=22792  
+About offset of Metadata Partition/ embedded directory: https://stackoverflow.com/questions/8832031/udf-filesystem-reading-bluray-metadata-partition-libdvdread-with-iso-images    
 https://www.rodneybeede.com/programming/understanding_the_udf_file_system_specification.html  
 ISO-9660/ UDF Bridge (ppt): https://dokumen.tips/download/link/07udf-iso9660-file-system.html  
 https://betterexplained.com/articles/unicode/  
@@ -102,12 +101,12 @@ Windows 10 quirks: https://lore.kernel.org/lkml/96e1ea00-ac12-015d-5c54-80a83f08
 Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf  
 
 #### VARIOUS TEST ISO'S
-ISO-9660 Extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures  
+ISO-9660 with various extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures  
 UDF 1.50-2.60 test iso's: https://sourceforge.net/p/sevenzip/patches/389/  
-UDF: https://sourceforge.net/p/sevenzip/bugs/964/  
-UFD: http://www.av-info.eu/download_dvd+bluray.html  
-UDF: https://github.com/clalancette/pycdlib/issues/94  
-UDF: https://bugs.freebsd.org/bugzilla//show_bug.cgi?id=163065  
+UDF 1.02 with single file: https://sourceforge.net/p/sevenzip/bugs/964/  
+UDF on bluray: http://www.av-info.eu/download_dvd+bluray.html  
+UDF 2.01 filesystem with ISO 9660 UDFONLY.TXT: https://github.com/clalancette/pycdlib/issues/94  
+UDF with mounttab (absolute link): https://bugs.freebsd.org/bugzilla//show_bug.cgi?id=163065  
 
 ### SCREENSHOTS
 
