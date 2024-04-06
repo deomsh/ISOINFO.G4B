@@ -46,29 +46,29 @@ All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1').
 ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
 On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.
   
-HISTORY
+### HISTORY
 
 Version 0.7: First published version
 
-ISO-9660
+### ISO-9660
 
 Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge.
 
 Unupported: Path Table, Multi-Extent files, Interleave Gap
 
 
-UDF
+### UDF
 
 Supported: all versions (v2.60 untested on optical media). 
 
 Unsupported: More than one Volume/ (real) Partition. Multi Session (except UDF CD-R/DVD+/-R). Named Streams (except first System Stream). 
 
-GENERAL LIMITATIONS
+### GENERAL LIMITATIONS
 
 Maximum length of PATH (and FILE) about 510 chars, Only embedded Extended Attributes supported. 
 
 
-USED SOURCES ISO-9660
+### USED SOURCES ISO-9660
 
 ECMA 119 4th Edition / June 2019: https://ecma-international.org/wp-content/uploads/ECMA-119_4th_edition_june_2019.pdf
 
@@ -105,7 +105,7 @@ https://dev.lovelyhq.com/libburnia/web/wikis/Aaip
 SEGA CD-XA specs: https://antime.kapsi.fi/sega/files/ST-040-R4-051795.pdf 
 
 
-USED SOURCES UDF
+### USED SOURCES UDF
 
 ECMA 167 3rd edition, June 1997: https://ecma-international.org/wp-content/uploads/ECMA-167_3rd_edition_june_1997.pdf
 
@@ -144,7 +144,7 @@ Windows 10 quirks: https://lore.kernel.org/lkml/96e1ea00-ac12-015d-5c54-80a83f08
 Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf 
 
 
-VARIOUS TEST ISO'S
+### VARIOUS TEST ISO'S
 
 ISO-9660 Extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures
 
@@ -158,7 +158,7 @@ UDF: https://github.com/clalancette/pycdlib/issues/94
 
 UDF: https://bugs.freebsd.org/bugzilla//show_bug.cgi?id=163065 
 
-SCREENSHOTS
+### SCREENSHOTS
 
 ISO-9660/ UDF Descriptors on Windows 10 iso
 
