@@ -1,6 +1,6 @@
 # ISOINFO.G4B
 
-## ISOINFO.G4B v0.7 (20240406), by deomsh
+### ISOINFO.G4B v0.7 (20240406), by deomsh
 
 Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist
 
