@@ -14,9 +14,9 @@ UDF 2:			--UDFDIR|UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H[-]0] [--CASE] 
 UDF 3:			--LSN=sector|--LBN=number [--OFFSET=bytes] [--MIRROR|--PREVIOUS]  
 
 REMARKS  
-All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1').  
-ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk).  
-On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.  
+All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1')  
+ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk)  
+On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value  
 
 EXAMPLES  
 ISOINFO.G4B (hd0,0)/filename.iso  
@@ -39,6 +39,7 @@ ISO-9660 (all levels), El Torito, Joliet, Rock Ridge
   
 Unupported:  
 Path Table  
+Apple Extensions  
 Multi-Extent files  
 Interleave Gap  
 
@@ -51,8 +52,9 @@ All versions (v2.60 untested on optical media)
 Unsupported:  
 More than one Volume/ (real) Partition  
 Higher Character set's than OSTA CS0  
-Multi Session (except UDF CD-R/DVD+/-R)  
-Named Streams (except first System Stream)   
+Multi-session (except UDF CD-R/DVD+/-R)  
+Named Streams (except first System Stream)  
+WORM  
 
 ### GENERAL LIMITATIONS
 
