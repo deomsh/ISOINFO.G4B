@@ -1,6 +1,6 @@
 # ISOINFO.G4B
 
-ISOINFO.G4B v0.7 (20240406), by deomsh
+<p>ISOINFO.G4B v0.7 (20240406), by deomsh
 
 Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist
 
@@ -44,33 +44,33 @@ REMARKS
 
 All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1'). 
 ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
-On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value. 
+On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value.</p> 
 
 
-HISTORY
+<p>HISTORY
 
-Version 0.7: First published version
+Version 0.7: First published version</p>
 
 
-ISO-9660
+<p>ISO-9660
 
 Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge.
 
-Unupported: Path Table, Multi-Extent files, Interleave Gap
+Unupported: Path Table, Multi-Extent files, Interleave Gap</p>
 
 
-UDF
+<p>UDF
 
 Supported: all versions (v2.60 untested on optical media). 
 
-Unsupported: More than one Volume/ (real) Partition. Multi Session (except UDF CD-R/DVD+/-R). Named Streams (except first System Stream). 
+Unsupported: More than one Volume/ (real) Partition. Multi Session (except UDF CD-R/DVD+/-R). Named Streams (except first System Stream). </p>
 
-GENERAL LIMITATIONS
+<p>GENERAL LIMITATIONS
 
-Maximum length of PATH (and FILE) about 510 chars, Only embedded Extended Attributes supported. 
+Maximum length of PATH (and FILE) about 510 chars, Only embedded Extended Attributes supported. </p>
 
 
-USED SOURCES ISO-9660
+<p>USED SOURCES ISO-9660
 
 ECMA 119 4th Edition / June 2019: https://ecma-international.org/wp-content/uploads/ECMA-119_4th_edition_june_2019.pdf
 
@@ -104,10 +104,10 @@ https://handwiki.org/wiki/TRANS.TBL
 
 https://dev.lovelyhq.com/libburnia/web/wikis/Aaip
 
-SEGA CD-XA specs: https://antime.kapsi.fi/sega/files/ST-040-R4-051795.pdf
+SEGA CD-XA specs: https://antime.kapsi.fi/sega/files/ST-040-R4-051795.pdf </p>
 
 
-USED SOURCES UDF
+<p>USED SOURCES UDF
 
 ECMA 167 3rd edition, June 1997: https://ecma-international.org/wp-content/uploads/ECMA-167_3rd_edition_june_1997.pdf
 
@@ -143,10 +143,10 @@ https://bsdio.com/edk2/docs/master/_mde_pkg_2_include_2_industry_standard_2_udf_
 
 Windows 10 quirks: https://lore.kernel.org/lkml/96e1ea00-ac12-015d-5c54-80a83f08b898@digidescorp.com/T/
 
-Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf
+Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf </p>
 
 
-VARIOUS TEST ISO'S
+<p>VARIOUS TEST ISO'S
 
 ISO-9660 Extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures
 
@@ -158,9 +158,9 @@ UFD: http://www.av-info.eu/download_dvd+bluray.html
 
 UDF: https://github.com/clalancette/pycdlib/issues/94
 
-UDF: https://bugs.freebsd.org/bugzilla//show_bug.cgi?id=163065
+UDF: https://bugs.freebsd.org/bugzilla//show_bug.cgi?id=163065 </p>
 
-SCREENSHOTS
+<p>SCREENSHOTS
 
 ISO-9660/ UDF Descriptors on Windows 10 iso
 
@@ -198,3 +198,4 @@ Using ISOINFO.G4B on GRUB4DOS for UEFI with CD (0xa0) to get access to small fil
 CD-RW: small empty UDF v2.01 Sparing Table with HEX
 
 ![ISOINFO --SPT --HEX (0xe0) UDF v2 01 Sparing Table on old fillud up CD-RW still empty](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/c0bf3cc1-6616-4cdf-bb84-04a2b1266ae5)
+</p>
