@@ -40,9 +40,17 @@ Example:		ISOINFO.G4B --UDFRECORD=System\ Volume\ Information (hd0,0)/some.iso
 
 Example:		ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso
 
+REMARKS
+
+All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1'). 
+ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
+On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value. 
+
+
 HISTORY
 
 Version 0.7: First published version
+
 
 ISO-9660
 
@@ -50,11 +58,17 @@ Supported: ISO-9660 (all levels), El Torito, Joliet, Rock Ridge.
 
 Unupported: Path Table, Multi-Extent files, Interleave Gap
 
+
 UDF
 
 Supported: all versions (v2.60 untested on optical media). 
 
 Unsupported: More than one Volume/ (real) Partition. Multi Session (except UDF CD-R/DVD+/-R). Named Streams (except first System Stream). 
+
+GENERAL LIMITATIONS
+
+Maximum length of PATH (and FILE) about 510 chars, Only embedded Extended Attributes supported. 
+
 
 USED SOURCES ISO-9660
 
@@ -91,6 +105,7 @@ https://handwiki.org/wiki/TRANS.TBL
 https://dev.lovelyhq.com/libburnia/web/wikis/Aaip
 
 SEGA CD-XA specs: https://antime.kapsi.fi/sega/files/ST-040-R4-051795.pdf
+
 
 USED SOURCES UDF
 
@@ -130,7 +145,9 @@ Windows 10 quirks: https://lore.kernel.org/lkml/96e1ea00-ac12-015d-5c54-80a83f08
 
 Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf
 
+
 VARIOUS TEST ISO'S
+
 ISO-9660 Extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures
 
 UDF 1.50-2.60 test iso's: https://sourceforge.net/p/sevenzip/patches/389/
@@ -142,18 +159,6 @@ UFD: http://www.av-info.eu/download_dvd+bluray.html
 UDF: https://github.com/clalancette/pycdlib/issues/94
 
 UDF: https://bugs.freebsd.org/bugzilla//show_bug.cgi?id=163065
-
-
-General Limitations:
-Maximum length of PATH (and FILE) about 510 chars. 
-Only embedded Extended Attributes supported. 
-
-
-REMARKS
-
-All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1'). 
-ISO-9660 tested up to 8GB (DVD), UDF up to 465GB (Partition on Hard Disk). 
-On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value. 
 
 SCREENSHOTS
 
