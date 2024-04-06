@@ -1,9 +1,9 @@
 ## ISOINFO.G4B v0.7 (20240407), by deomsh
 
-Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
+<pre><code>Function 1:	Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
 Function 2:	Read/ find directories/ files or read-out their Directory Records  
-Use:				<pre><code>ISOINFO.G4B [SWITCHES] DEVICE|FILE  
-Help:				<pre><code>ISOINFO.G4B /?  
+Use:				ISOINFO.G4B [SWITCHES] DEVICE|FILE  
+Help:				ISOINFO.G4B /?  
 
 SWITCHES  
 General:		[--Q] [--HEX] [--BLOCKSIZE=bytes] [--MDBASE=sector] [--INFO]  
@@ -26,7 +26,7 @@ ISOINFO.G4B --RECORD=FILENAME.EXT;1 (0xe0)
 ISOINFO.G4B --RECORD2=boot.catalog (0xe0)  
 ISOINFO.G4B --DIR2=SUBDIR/bo*.c* (0xe0)  
 ISOINFO.G4B --UDFRECORD=System\ Volume\ Information (hd0,0)/some.iso  
-ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso  
+ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso</code></pre>  
 
 ### HISTORY
 
