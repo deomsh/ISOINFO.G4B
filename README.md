@@ -16,6 +16,7 @@ UDF 2:      --UDFDIR/UDFRECORD=[PATH][filename.ext] [--ATTRIB=DF[-]H[-]0] [--CAS
 UDF 3:      --LSN=sector|--LBN=number [--OFFSET=bytes] [--MIRROR|--PREVIOUS]  
 
 REMARKS  
+Maximum length of PATH (and FILE) about 510 chars  
 All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1')  
 ISO-9660 and UDF tested up to 8GB-DVD, UDF up to 465GB-Partition (on Hard Disk)  
 On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value  
@@ -40,11 +41,12 @@ Supported:
 ISO-9660 (all levels), El Torito, Joliet, Rock Ridge  
   
 Unupported:  
+PATH length above 510 chars  
 Path Table  
+Embedded Attributes outside System Use Area
 Apple Extensions  
 Multi-Extent files  
 Interleave Gap  
-
 
 ### UDF
 
@@ -52,17 +54,13 @@ Supported:
 All versions (v2.60 untested on optical media)  
   
 Unsupported:  
+PATH length above 510 chars  
 More than one Volume/ (real) Partition  
 Higher Character set's than OSTA CS0  
 Multi-session (except UDF CD-R/DVD+/-R)  
-Named Streams (except first System Stream)  
+Named Streams (except first System Stream)
+Not-embedded Extended Attributes
 WORM  
-
-### GENERAL LIMITATIONS
-
-Maximum length of PATH (and FILE) about 510 chars  
-Only embedded Extended Attributes supported  
-
 
 #### USED SOURCES ISO-9660
 
