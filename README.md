@@ -1,4 +1,4 @@
-## ISOINFO.G4B v0.7 (20240406), by deomsh
+## ISOINFO.G4B v0.7 (20240408), by deomsh
 
 <pre><code>Function 1: Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
 Function 2: Read/ find directories/ files or read-out their Directory Records  
@@ -43,7 +43,7 @@ ISO-9660 (all levels), El Torito, Joliet, Rock Ridge
 Unupported:  
 PATH length above 510 chars  
 Path Table  
-Embedded Attributes outside System Use Area
+Embedded Attributes outside System Use Area  
 Apple Extensions  
 Multi-Extent files  
 Interleave Gap  
@@ -58,8 +58,8 @@ PATH length above 510 chars
 More than one Volume/ (real) Partition  
 Higher Character set's than OSTA CS0  
 Multi-session (except UDF CD-R/DVD+/-R)  
-Named Streams (except first System Stream)
-Not-embedded Extended Attributes
+Named Streams (except first System Stream)  
+Not-embedded Extended Attributes  
 WORM  
 
 #### USED SOURCES ISO-9660
