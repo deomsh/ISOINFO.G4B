@@ -44,8 +44,7 @@ Unsupported:
 PATH length above 510 chars  
 Path Table  
 UTF-8 characters  
-Embedded Attributes outside System Use Area  
-Apple Extensions  
+Extended Attributes outside System Use Area  
 Multi-Extent files  
 Interleave Gap  
 
