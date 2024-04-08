@@ -33,7 +33,8 @@ ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso</code></pre>
 
 ### HISTORY
 
-Version 0.7: First published version
+Version 0.7  
+First published version
 
 ### ISO-9660
 
