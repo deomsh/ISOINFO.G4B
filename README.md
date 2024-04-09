@@ -58,7 +58,7 @@ Unsupported:
 PATH length above 510 chars  
 More than one Volume/ (real) Partition  
 Higher Character set's than OSTA CS0  
-Multi-session (except UDF CD-R/DVD+/-R)  
+Multi-session  
 Named Streams (except first System Stream)  
 Not-embedded Extended Attributes  
 WORM  
