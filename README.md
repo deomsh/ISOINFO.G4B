@@ -105,8 +105,8 @@ Rare: http://netwinder.osuosl.org/users/a/andrewm/udf/docs/CDUDF190.pdf
 
 #### VARIOUS TEST ISO'S
 ISO-9660 with various extensions: https://github.com/vdechenaux/iso-9660/tree/master/tests/fixtures  
-ISO-9660 with UTF8 characters: https://github.com/barneygale/isoparser/tree/master/isoparser/test
-ISO-9660 with many extensions (including Apple): https://github.com/KBNLresearch/isolyzer/tree/main/testFiles
+ISO-9660 with UTF8 characters: https://github.com/barneygale/isoparser/tree/master/isoparser/test  
+ISO-9660 with many extensions (including Apple): https://github.com/KBNLresearch/isolyzer/tree/main/testFiles  
 UDF 1.50-2.60 test iso's: https://sourceforge.net/p/sevenzip/patches/389/  
 UDF 1.02 with single file: https://sourceforge.net/p/sevenzip/bugs/964/  
 UDF on bluray: http://www.av-info.eu/download_dvd+bluray.html  
