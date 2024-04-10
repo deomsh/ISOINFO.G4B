@@ -52,7 +52,7 @@ Interleave Gap
 ### UDF
 
 Supported:  
-All versions (v2.60 untested on optical media)  
+All UDF-versions (v2.60 untested on optical media)  
   
 Unsupported:  
 PATH length above 510 chars  
@@ -62,6 +62,7 @@ Multi-session
 Named Streams (except first System Stream)  
 Not-embedded Extended Attributes  
 WORM  
+Secure-UDF  
 
 #### USED SOURCES ISO-9660
 
@@ -145,7 +146,12 @@ ISO-9660: DIR functions and Directory Record with Rock Ridge Extensions
 
 DVD+R: using previous UDF v1.50 Virtual Allocation Tables
 
-![GRUB4DOS 20160118 45c ISOINFO --UDFDIR  --PREVIOUS  (0xe0) on DVDR1SES ISO until 'No previous VAT found' (1MB ONE AVDP) I](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/c2b55fec-94ea-45d4-95f2-1855a1a0c12e)
+![GRUB4DOS 20160118 45c ISOINFO --UDFDIR  --PREVIOUS  (0xe0) on DVDR1SES ISO until 'No previous VAT found' (1MB ONE AVDP) I](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/c2b55fec-94ea-45d4-95f2-1855a1a0c12e)  
+
+DVD+R: using previous UDF v2.01 formatting
+
+![ISOINFO G4B --UDFDIR   set L   --AVDP   --AVDP --PREVIOUS   --UDFDIR + set L on (0xe00) DVD+R after the second format shown finding the first format](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/fa4d9acb-778b-468f-aa16-9fefd8ff4e40)
+
 
 Using ISOINFO.G4B on GRUB4DOS for UEFI with CD (0xa0) to get access to small file (embedded in File Entry)
 ![Using ISOINFO G4B on GRUB4EFI and CD (0xa0) to get access to small file embedded in File Entry I](https://github.com/deomsh/ISOINFO.G4B/assets/67714723/89e78d94-917e-425b-b42b-2d84f735aa5b)
