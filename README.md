@@ -67,6 +67,7 @@ Secure-UDF
 #### USED SOURCES ISO-9660
 
 ECMA 119 4th Edition / June 2019: https://ecma-international.org/wp-content/uploads/ECMA-119_4th_edition_june_2019.pdf  
+Clayton Summers' Introduction to ISO-9660: https://hwiegman.home.xs4all.nl/fileformats/C/cdrom/iso9660.pdf  
 El Torito spec: https://pdos.csail.mit.edu/6.828/2018/readings/boot-cdrom.pdf  
 System Use Sharing Protocol 1.12 specs: https://docplayer.net/29621206-Ieee-p1281-system-use-sharing-protocol-draft-standard-version-1-12-adopted.html  
 Rock Ridge 1.09 specs: http://web.archive.org/web/20230826015627/http://ftpmirror.your.org/pub/misc/bitsavers/projects/cdrom/Rock_Ridge_CD_Proposal_199108.pdf  
