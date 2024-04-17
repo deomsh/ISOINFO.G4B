@@ -37,10 +37,10 @@ ISOINFO.G4B --RECORD=/.. (hd0,0)/some.iso
 Version 0.7.1  
 BUGFIX: last byte of 'Implementation Use Area' was not displayed (UDF)  
 BUGFIX: Output variable 'Rblock' wrong in case of multiple Extents (UDF)  
+Small Output-related changed (textual only)
 NEW: view Directory Record of the root of a directory with '--RECORD[2/3][RR]=[PATH].' (ISO-9660)  
 NEW: view Directory Record of Parent Directory with '--RECORD[2/3][RR]=[PATH]..' (ISO-9660)  
 NEW: view File Identifier Descriptor and (Extended) File Entry of Parent Directory with '--UDFRECORD=[PATH]..' (UDF)  
-Small Output-related changed (textual only)
 
 Version 0.7  
 First published version
