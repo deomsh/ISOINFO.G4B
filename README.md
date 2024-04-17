@@ -1,4 +1,4 @@
-## ISOINFO.G4B v0.7 (20240409), by deomsh
+## ISOINFO.G4B v0.7.1 (20240417), by deomsh
 
 <pre><code>Function 1: Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
 Function 2: Read/ find directories/ files or read-out their Directory Records  
@@ -30,8 +30,17 @@ ISOINFO.G4B --RECORD2=boot.catalog (0xe0)
 ISOINFO.G4B --DIR2=SUBDIR/bo*.c* (0xe0)  
 ISOINFO.G4B --UDFRECORD=System\ Volume\ Information (hd0,0)/some.iso  
 ISOINFO.G4B --UDFDIR="System Volume Information/" (hd0,0)/some.iso</code></pre>  
+ISOINFO.G4B --RECORD=/.. (hd0,0)/some.iso  
 
 ### HISTORY
+
+Version 0.7.1  
+BUGFIX: last byte of 'Implementation Use Area' was not displayed (UDF)  
+BUGFIX: Output variable 'Rblock' wrong in case of multiple Extents (UDF)  
+NEW: view Directory Record of the root of a directory with '--RECORD[2/3][RR]=[PATH].' (ISO-9660)  
+NEW: view Directory Record of Parent Directory with '--RECORD[2/3][RR]=[PATH]..' (ISO-9660)  
+NEW: view File Identifier Descriptor and (Extended) File Entry of Parent Directory with '--UDFRECORD=[PATH]..' (UDF)  
+Small Output-related changed (textual only)
 
 Version 0.7  
 First published version
