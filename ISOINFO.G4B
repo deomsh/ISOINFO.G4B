@@ -2022,7 +2022,7 @@ echo $[]           if a file: export of variables 'Rsize', 'Rsector' and 'Raddre
 echo $[]       '--UDFRECORD=[PATH][filename.ext]' to force UDF on UDF/ISO-Bridge
 echo $[]       '--UDFRECORD=PATH': File Identifier Descriptors showed only
 echo $[]       Special: '--ISORECORD=[PATH].': for Root of Directory
-echo $[]       Special: '--RECORD=[PATH].' or '--UDFRECORD=PATH.': for Parent Directory
+echo $[]       Special: '--RECORD=[PATH]..' or '--UDFRECORD=PATH..': for Parent Directory
 echo $[]       '--RECORD=[PATH][filename.ext]' is possible if UDF-only (ISO-9660 first)
 echo $[]         '--MDCOPY': copy multi-extent UDF-files to memory, variable 'Rmtarget'
 echo $[]                   Maximum file size copied to memory: about 2GB
