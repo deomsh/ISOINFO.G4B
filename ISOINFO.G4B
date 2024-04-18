@@ -1667,7 +1667,6 @@ if not exist ISODIR if not exist ISODIR2 if not exist ISODIR3 if not exist ISODI
 if exist subdir && set "subdir=%subdir%" &; set /a sublen=%@retval%
 if not exist NULL && if %Q%==Y && set "NULL= > nul"
 if exist ATTRIB &; call Fn.11 "%ATTRIB%" "-D" && set DIRS=N ! call Fn.11 "%ATTRIB%" "D" && set DIRS=Y && set FILES=N ;; if exist ATTRIB &; call Fn.11 "%ATTRIB%" "-F" && set FILES=N ! call Fn.11 "%ATTRIB%" "F" && set FILES=Y && if not %DIRS%==Y && set DIRS=N ;; if exist ATTRIB &; call Fn.11 "%ATTRIB%" "-H" && set HIDDEN=N ! call Fn.11 "%ATTRIB%" "H" && set HIDDEN=Y ;; if exist ATTRIB &; if %DIRS%==N && if %FILES%==N && set DIRS= && set FILES= ! if %DIRS%==Y && if %FILES%==Y && set DIRS= && set FILES=
-if %DR%==Y &; if "%cdfile:~-1,1%"=="." && if not "%cdfile:~-2,2%"=="/." && if not "%cdfile:~-2,2%"==".." && set "cdfile=%cdfile:~0,-1%/." ! if "%cdfile2:~-1,1%"=="." && if not "%cdfile2:~-2,2%"=="/." && if not "%cdfile2:~-2,2%"==".." && set "cdfile2=%cdfile2:~0,-1%/." ! if "%cdfile3:~-1,1%"=="." && if not "%cdfile3:~-2,2%"=="/." && if not "%cdfile3:~-2,2%"==".." && set "cdfile3=%cdfile3:~0,-1%/." ! if "%cdfile:~-2,2%"==".." && if not "%cdfile:~-3,3%"=="/.." && set "cdfile=%cdfile:~0,-2%/.." ! if "%cdfile2:~-2,2%"==".." && if not "%cdfile2:~-3,3%"=="/.." && set "cdfile2=%cdfile2:~0,-2%/.." ! if "%cdfile3:~-2,2%"==".." && if not "%cdfile3:~-3,3%"=="/.." && set "cdfile3=%cdfile3:~0,-2%/.."
 :directoryrecordloop
 set result= && set /A address2=%address2%+0x0 &; call :read %address2% %target% &; set /A recordln=%result%&0xff &; if %recordln%==0 && set bit1= && goto :directoryrecordend
 if not %DONE%==Y |; echo -e Entry in: '%cdpath%'%NULL%
@@ -1693,15 +1692,16 @@ if not exist level && if exist depth && set result= && set /A address2=%address2
 if not exist level && if exist depth && if not exist NULL && if %bit1%==1 && call echo -e %space%$[0x08]021$[0x0]"$[]Directory Name%t%\t\t\t%^FileID%%%NULL%
 if not exist level && if exist depth && set /a numdir=%numdir%+1 && call set "FileID=%^lfnfile%"
 set lfnfile= &; if not exist depth && set result= && set /A address2=%address2%+0x1 &; call :read %address2% %target% &; set /A result=%result%&0xff &; if %bit1%==0 && echo -e %space%$[0x08]021$[] File Name%t%\t\t\t%result%%%NULL% ! echo -e %space%$[0x08]021$[] Directory Name%t%\t\t\t%result%%%NULL% &; set /a numdir=%numdir%+1 && if %result%==0 && if %bit1%==1 && set mountISO=Y
-if %DR%==Y && if not %DONE%==Y &; if not "%cdfile:~-2,2%"=="/." if not "%cdfile2:~-2,2%"=="/." if not "%cdfile3:~-2,2%"=="/." |; if not exist FileID && if not exist subdir && if not exist depth && if %result%==0 &; if %bit1%==1 && set show=Y && set FileID=0 && set cdname= && set cdext= &; if not exist level && if not %recordln%<=0x22 && set FileIDRR=0
-if %DR%==Y && if not %DONE%==Y &; if not "%cdfile:~-3,3%"=="/.." if not "%cdfile2:~-3,3%"=="/.." if not "%cdfile3:~-3,3%"=="/.." |; if not exist FileID && if not exist subdir && if not exist depth && if %result%==1 &; if %bit1%==1 && set show=Y && set FileID=1 && set cdname= && set cdext= &; if not exist level && if not %recordln%<=0x22 && set FileIDRR=1
+if %DR%==Y && if %bit1%==1 && if "%cdext%"=="." && if not %DONE%==Y && if not exist FileID && if not exist subdir && if not exist depth &; if not exist cdfile if not exist cdfile2 if not exist cdfile3 |; if not exist cdname && if %result%==0 && set show=Y ! if "%cdname%"=="." && if %result%==1 && set show=Y &; if %show%==Y && set FileID=%result% && set cdname= && set cdext=
 setlocal
-if not exist level &; call Fn.11 "%find%" "RR" &; if not exist ISODIRR if not exist ISODIRR2 if not exist ISODIRR3 if not exist ISODRR |; set /A voladdr=%CDskip%+%address2%-0x21 && set t=\t && set t2=\t && set "target=%CDtarget%" && set LEN_DR=%recordln% && set LEN_FI=%length% &; if not %FileIDRR%==0 && if not %FileIDRR%==1 && set FileIDRR=
+if not exist level &; call Fn.11 "%find%" "RR" &; if not exist ISODIRR if not exist ISODIRR2 if not exist ISODIRR3 if not exist ISODRR |; set /A voladdr=%address2%-0x21 && set t=\t && set t2=\t && set "target=%target%" && set LEN_DR=%recordln% && set LEN_FI=%length% && set FileIDRR=
+#ORG=TooSlow#if not exist level &; call Fn.11 "%find%" "RR" &; if not exist ISODIRR if not exist ISODIRR2 if not exist ISODIRR3 if not exist ISODRR |; set /A voladdr=%CDskip%+%address2%-0x21 && set t=\t && set t2=\t && set "target=%CDtarget%" && set LEN_DR=%recordln% && set LEN_FI=%length% && set FileIDRR=
 if not exist level &; call Fn.11 "%find%" "RR" &; if not exist ISODIRR if not exist ISODIRR2 if not exist ISODIRR3 if not exist ISODRR |; set /a LEN_SU=%LEN_DR%-0x21-%LEN_FI% &; calc %LEN_SU% % 2 && set /a LEN_SU=%LEN_SU%-1
 if not exist level &; call Fn.11 "%find%" "RR" &; if not exist ISODIRR if not exist ISODIRR2 if not exist ISODIRR3 if not exist ISODRR |; if %LEN_SU%>=4 && set /A startuse=%recordln%-%LEN_SU% &; echo $[0x08]0%startuse:~2%$[] System Use:%NULL% && call :systemuse
-endlocal && set "FileIDRR=%FileIDRR%" && set RR=%RR%
+endlocal && set "FileIDRR=%FileIDRR%" && set RR=%RR% &; if %RR%==Y &; if not "%FileID%"=="0x0" if not "%FileID%"=="0x1" |; set FileIDRR=%FileID%
 if not exist ISOROOT && if not exist ISOROOT2 && if not exist ISOROOT3 &; if not exist ISODIRR if not exist ISODIRR2 if not exist ISODIRR3 if not exist ISODRR if not exist ISODRR2 if not exist ISODRR3 |; if exist FileIDRR && set "FileID=%FileIDRR%" &; if not "%found:~-4,2%"=="RR" &; if exist ISODIRR3 && set "found=%found%ISODIRR3 " ! if exist ISODIRR2 && set "found=%found%ISODIRR2 " ! if exist ISODIRR && set "found=%found%ISODIRR  " ! if exist ISODRR && if exist cdfile && set "found=%found%ISODRR  " ! if exist ISODRR && if exist cdfile2 && set "found=%found%ISODRR2 " ! if exist ISODRR && if exist cdfile3 && set "found=%found%ISODRR3 "
-if %DONE%==Y && if %hexview%==Y && if exist FileID && if exist level && set /A address=%address2%-0x21 &; raw cat --hex --skip=%address% --length=%recordln% %target%%%NULL%
+if %DONE%==Y && if %hexview%==Y && if exist level && if exist FileID && set /A address=%address2%-0x21 &; raw cat --hex --skip=%address% --length=%recordln% %target%%%NULL%
+if %DONE%==Y && if %hexview%==Y && if not exist level && if exist FileID && if not exist FileIDRR && set /A address=%address2%-0x21 &; raw cat --hex --skip=%address% --length=%recordln% %target%%%NULL%
 if %DONE%==Y &; if exist level && set "found=%found% ISODR2 " ! set "found=%found% ISODR " &; if %bit1%==0 && set "RfileID=%FileID%" ! set RfileID= &; endlocal && set mountISO=%mountISO% && set RR=%RR% && set LEN_DR=%recordln% && set LEN_FI=%length% && set address2=%address2% && set FOUND=Y && set "found=%found%" && set namepos=%address2% && set "target=%target%" && set "CDtarget=%CDtarget%" && set DATALBN=%DATALBN% && set DATASIZE=%DATASIZE% && set "RfileID=%RfileID%" && goto :eof
 if %DR%==N && if %bit1%==1 && if exist FileID && if exist subdir && if %folder%==Y &; call if %i% "%^subdir%"=="%^FileID%" && set /A address=%address2%-0x1F &; call :read %address% %target% &; set /A LBAdir=%result%&0xffffffff && set result= &; set /A address=%address%+0x8 &; call :read %address% %target% &; set /A DIRsize=%result%&0xffffffff &; endlocal && set mountISO=%mountISO% && set RR=%RR% && set LBAdir=%LBAdir% && set DIRsize=%DIRsize% && set address2=%address2% && set FOUND=Y && goto :eof
 set /A dirsize=%dirsize%+%recordln%
@@ -1736,7 +1736,8 @@ if %checkLEN%==Y && call :read %address2% %target% &; set /A result=%result%&0xf
 if %checkLEN%==Y && set checkLEN= && set MAX= && set bit1= && goto :directoryrecordloop
 :directoryrecordend
 if %FOUND%==Y && call Fn.11 "%find%" "DIR" && call Fn.11 "%find%" "RR" && if not exist Q && echo
-if %hexview%==Y && if exist CDtarget &; call Fn.11 "%find%" "DRR" |; raw cat --hex --skip=%CDskip% --length=%dirsize% %CDtarget%%%NULL%
+if %hexview%==Y && call Fn.11 "%find%" "DRR" |; set /a skip=%address2%-0x21 &; raw cat --hex --skip=%skip% --length=%dirsize% %target%%%NULL%
+#ORG#if %hexview%==Y && if exist CDtarget &; call Fn.11 "%find%" "DRR" |; raw cat --hex --skip=%CDskip% --length=%dirsize% %CDtarget%%%NULL%
 if %bit1%==1 && set DIR=Y
 if %FOUND%==Y && set result=1
 endlocal && set mountISO=%mountISO% && set result=%result% && set FOUND=%FOUND% && set "found=%found%" && set DATALBN=%DATALBN% && set DATASIZE=%DATASIZE% && set DIR=%DIR% && set LEN_DR=%LEN_DR% && set LEN_FI=%LEN_FI% && set address2=%addressR% && set RR=%RR% && set numdirs=%numdirs% && set numfiles=%numfiles%
@@ -2040,7 +2041,7 @@ echo $[] Stay in History: not use switch '--PREVIOUS', choose 'Re-use values' if
 echo '--BLOCKSIZE=bytes' >=512 (multiple of 512) to force block size, if auto fails
 echo '--MDBASE=sector' to set memory start sector (default 0x20000)
 echo '--HEX': view Descriptors, Directory Record(s) and Boot Catalog in hex too
-echo $[]   If cached in memory starting at zero (except ISO-9660 Records, UDF' SBD/SPT)
+echo $[]   If cached in memory starting at zero (except UDF' SBD/SPT)
 echo '--LSN=sector': Logical Sector Number of all UDF-Descriptors mentioned (view)
 echo '--LBN=number': Logical Block Number of File-related UDF-Descriptors (view)
 echo $[]         Returns variable 'LSN': (Volume) Logical Sector Number of given LBN
