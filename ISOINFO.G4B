@@ -1,5 +1,5 @@
 !BAT
-#-#+ ISOINFO.G4B v0.7.1 (20240418), by deomsh
+#-#+ ISOINFO.G4B v0.7.2 (20240420), by deomsh
 if "%~1"=="" && call :help "smallhelp" && goto :eof ! if /i "%~1"=="/?" && goto :help
 if exist @uefi && graphicsmode > nul &; if %@retval%<=0xFF && echo Textmode of grub4efi not supported && goto :eof
 setlocal && set * && set "Lsession=%Lsession%"
@@ -1736,7 +1736,7 @@ if %checkLEN%==Y && call :read %address2% %target% &; set /A result=%result%&0xf
 if %checkLEN%==Y && set checkLEN= && set MAX= && set bit1= && goto :directoryrecordloop
 :directoryrecordend
 if %FOUND%==Y && call Fn.11 "%find%" "DIR" && call Fn.11 "%find%" "RR" && if not exist Q && echo
-if %hexview%==Y && call Fn.11 "%find%" "DRR" |; set /a skip=%address2%-0x21 &; raw cat --hex --skip=%skip% --length=%dirsize% %target%%%NULL%
+if %hexview%==Y &; call Fn.11 "%find%" "DRR" |; set /a skip=%address2%-0x21 &; raw cat --hex --skip=%skip% --length=%dirsize% %target%%%NULL%
 #ORG#if %hexview%==Y && if exist CDtarget &; call Fn.11 "%find%" "DRR" |; raw cat --hex --skip=%CDskip% --length=%dirsize% %CDtarget%%%NULL%
 if %bit1%==1 && set DIR=Y
 if %FOUND%==Y && set result=1
@@ -1950,7 +1950,7 @@ if %g4dver%>=20170830 && raw cat --skip=%skip% --locate=, --number=1 (md)0x300+2
 if not %g4dver%>=20170830 && raw cat --skip=%skip% --locate=Usable\x20RAM: --number=1 (md)0x300+2 > nul &; set /A skip=%?%+12 &; raw cat --skip=%skip% --locate=Base: --length=5 (md)0x300+2 > nul &; set /A skip=%?%+6 &; raw cat --skip=%skip% --locate=, --number=1 (md)0x300+2 > nul &; set /A len=%?%-%skip% &; raw cat --skip=%skip% --length=%len% (md)0x300+2 | set base= &; if exist base && set /A base=%base% &; if not %base%>=0x100000000 && set /A skip=%skip%+%len%+1 &; raw cat --skip=%skip% --locate=Length: --number=1 (md)0x300+2 > nul &; set /A skip=%?%+8 &; raw cat --skip=%skip% --locate=\x0A --number=1 (md)0x300+2 > nul &; set /A len=%?%-%skip% &; raw cat --skip=%skip% --length=%len% (md)0x300+2 | set length= &; if exist length && set /A length=%length% && set /A skip=%skip%+%len% &; if not %length%<=%freesect% && set freesect=%length% && set mdbase=%base% && set base= && set length= ! set base= && set length= &; raw cat --skip=%skip% --locate=\x0A --number=1 (md)0x300+2 > nul &; set /A skip=%?%+1 &; if not %skip%>=%SEARCH% && goto :freemem
 if not %g4dver%>=20170830 && set /A mdbase=%mdbase%>>9 && set /A freesect=%freesect%>>9 ! set g4dver=%g4dver% &; set /a freemem=%freesect% * 512 >>20 && set /A mdend=%mdbase%+%freesect% && goto :eof
 :help
-if not "%~1"=="smallhelp" && echo ISOINFO.G4B v0.7.1 (20240418), by deomsh
+if not "%~1"=="smallhelp" && echo ISOINFO.G4B v0.7.2 (20240420), by deomsh
 echo Function: Read-out ISO-9660/UDF Descriptors on a device, imagefile or blocklist
 echo $[]          Read/ find directories/ files or read-out their Directory Records
 echo Use:      ISOINFO.G4B [SWITCHES] DEVICE|FILE
