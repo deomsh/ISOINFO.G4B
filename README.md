@@ -1,4 +1,4 @@
-## ISOINFO.G4B v0.7.1 (20240418)
+## ISOINFO.G4B v0.7.2 (20240420)
 
 <pre><code>Function 1: Read-out ISO-9660/UDF Descriptors on a device, image-file or blocklist  
 Function 2: Read/ find directories/ files or read-out their Directory Records  
@@ -34,6 +34,8 @@ ISOINFO.G4B --RECORD=/.. (hd0,0)/some.iso</code></pre>
 
 ### HISTORY
 
+Version 0.7.2  
+BUGFIX: ISO-9660 PVD/SVD Root Directory Record always showed with HEX, bug was introduced in v0.7.1 (harmless)
 Version 0.7.1  
 BUGFIX: last byte of 'Implementation Use Area' was not displayed (UDF)  
 BUGFIX: Output variable 'Rblock' wrong in case of multiple Extents (UDF)  
