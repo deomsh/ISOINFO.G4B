@@ -35,7 +35,7 @@ ISOINFO.G4B --RECORD=/.. (hd0,0)/some.iso</code></pre>
 ### HISTORY
 
 Version 0.7.2  
-BUGFIX: ISO-9660 PVD/SVD Root Directory Record always showed with HEX, bug was introduced in v0.7.1 (harmless)
+BUGFIX: ISO-9660 PVD/SVD Root Directory Record always showed with HEX, bug was introduced in v0.7.1 (harmless)  
 Version 0.7.1  
 BUGFIX: last byte of 'Implementation Use Area' was not displayed (UDF)  
 BUGFIX: Output variable 'Rblock' wrong in case of multiple Extents (UDF)  
