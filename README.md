@@ -19,7 +19,8 @@ REMARKS
 Maximum length of PATH (and FILE) about 510 chars  
 All (greyed-out) hex-offsets zero based (ECMA-119 starts at 1, so read '+1')  
 ISO-9660 and UDF tested up to 8GB-DVD, UDF up to 465GB-Partition (on Hard Disk)  
-On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value  
+On ISO-9660 big-endian values are read-out but only showed if exist and not equal to little-endian value
+Joliet is included in ISO-9660!
 
 EXAMPLES  
 ISOINFO.G4B (hd0,0)/filename.iso  
